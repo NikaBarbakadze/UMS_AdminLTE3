@@ -72,3 +72,25 @@
     }
   }
 }
+
+div.row nav{
+  ul{
+    display: flex;
+    li{
+      background-color: #343a40;
+      color: white;
+      list-style-type: none;
+      white-space: nowrap;
+      font-size: 0.8rem;
+      margin: 0 2px;
+      padding: 5px 5px;
+      &:hover{
+        background-color: #17a2b8;
+        color: white;
+      }
+      a{
+        color: white;
+      }
+    }
+  }
+}

@@ -472,3 +472,10 @@ html.maximized-card {
     }
   }
 }
+
+.card-header.p-0.pt-1, .special{
+  background-color: #17a2b8 !important;
+  h3.card-title{
+    color: white;
+  }
+}

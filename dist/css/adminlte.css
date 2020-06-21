@@ -10276,6 +10276,10 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+nav i {
+  font-size: 1rem;
+}
+
 html.scroll-smooth {
   scroll-behavior: smooth;
 }
@@ -18126,6 +18130,14 @@ html.maximized-card {
   border-left: 0;
 }
 
+.card-header.p-0.pt-1, .special {
+  background-color: #17a2b8 !important;
+}
+
+.card-header.p-0.pt-1 h3.card-title, .special h3.card-title {
+  color: white;
+}
+
 .modal-dialog .overlay {
   background-color: #000;
   display: block;
@@ -18900,6 +18912,30 @@ html.maximized-card {
 .card-body.p-0 .table tbody > tr > th:last-of-type,
 .card-body.p-0 .table tbody > tr > td:last-of-type {
   padding-right: 1.5rem;
+}
+
+div.row nav ul {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div.row nav ul li {
+  background-color: #343a40;
+  color: white;
+  list-style-type: none;
+  white-space: nowrap;
+  font-size: 0.8rem;
+  margin: 0 2px;
+  padding: 5px 5px;
+}
+
+div.row nav ul li:hover {
+  background-color: #17a2b8;
+  color: white;
+}
+
+div.row nav ul li a {
+  color: white;
 }
 
 .carousel-control.left, .carousel-control.right {
