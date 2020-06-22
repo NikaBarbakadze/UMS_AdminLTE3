@@ -521,11 +521,151 @@
             <h1>მთავარი</h1>
           </div>
         </div>
+        <div class="row">
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3>78</h3>
+
+                <p>დაგეგმილი</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-copy"></i>
+              </div>
+              <a href="ums_pages/planned.html" class="small-box-footer">გაიგე მეტი <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-warning">
+              <div class="inner">
+                <h3>44</h3>
+
+                <p>მიმდინარე</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-spinner"></i>
+              </div>
+              <a href="ums_pages/ongoing.html" class="small-box-footer">გაიგე მეტი <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3>53</h3>
+
+                <p>დასრულებული</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <a href="ums_pages/finished.html" class="small-box-footer">გაიგე მეტი <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger">
+              <div class="inner">
+                <h3>175</h3>
+
+                <p>ყველა პროექტი</p>
+              </div>
+              <div class="icon">
+                <i class="nav-icon fas fa-th"></i>
+              </div>
+              <a href="ums_pages/projects.html" class="small-box-footer">გაიგე მეტი <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+        </div>
+        <div class="row">
+       <div class="col-md-12">
+          <div class="card">
+             <div class="card-footer">
+                <div class="row">
+                   <div class="col-sm-3 col-6">
+                      <div class="description-block border-right">
+                         <span class="description-percentage text-info"><i class="fas fa-caret-up"></i> 38%</span>
+                         <h5 class="description-header">₾35,210</h5>
+                         <span class="description-text">გეგმაშია</span>
+                      </div>
+                      <!-- /.description-block -->
+                   </div>
+                   <!-- /.col -->
+                   <div class="col-sm-3 col-6">
+                      <div class="description-block border-right">
+                         <span class="description-percentage text-warning"><i class="fas fa-caret-left"></i> 15%</span>
+                         <h5 class="description-header">₾10,390</h5>
+                         <span class="description-text">იხარჯება</span>
+                      </div>
+                      <!-- /.description-block -->
+                   </div>
+                   <!-- /.col -->
+                   <div class="col-sm-3 col-6">
+                      <div class="description-block border-right">
+                         <span class="description-percentage text-success"><i class="fas fa-caret-up"></i> 20%</span>
+                         <h5 class="description-header">₾24,813</h5>
+                         <span class="description-text">დაიხარჯა</span>
+                      </div>
+                      <!-- /.description-block -->
+                   </div>
+                   <!-- /.col -->
+                   <div class="col-sm-3 col-6">
+                      <div class="description-block">
+                         <span class="description-percentage text-danger"><i class="fas fa-caret-down"></i> 2%</span>
+                         <h5 class="description-header">₾1,512</h5>
+                         <span class="description-text">შეწყდა</span>
+                      </div>
+                      <!-- /.description-block -->
+                   </div>
+                </div>
+                <!-- /.row -->
+               </div>
+                   <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+         </div>
+         <!-- /.col -->
+      </div>
+     <div class="row">
+       <div class="col-md-6">
+           <div class="card card-info">
+            <div class="card-header">
+                <h3 class="card-title">დაგეგმილი & გადახდილი თანხები</h3>
+              </div>
+              <div class="card-body">
+                <div class="chart"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                  <canvas id="payment_chart"></canvas>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+         </div>
+         <div class="col-md-6">
+           <div class="card card-info">
+              <div class="card-header bg-success">
+                <h3 class="card-title">სავარაუდო ათვისებები</h3>
+              </div>
+              <div class="card-body">
+                <div class="chart"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                  <canvas id="budget_chart"></canvas>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+         </div>
+         <!-- /.col -->
+      </div>
       </div><!-- /.container-fluid -->
-    </section>
     </section>
     <!-- /.content -->
   </div>
+
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <strong>Copyright &copy; 2020 <a href="http://mi-un.ge/ums/">Mi-Un.Ge</a>.</strong>
@@ -577,5 +717,76 @@
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+
+<script type="text/javascript">
+//line
+    var ctxL = document.getElementById("payment_chart").getContext('2d');
+    var myLineChart = new Chart(ctxL, {
+    type: 'line',
+    data: {
+    labels: ["იანვარი", "თებერვალი", "მარტი", "აპრილი", "მაისი", "ივნისი", "ივლისი"],
+    datasets: [{
+    label: "გეგმა",
+    data: [650, 590, 800, 810, 560, 550, 400],
+    backgroundColor: [
+    'rgba(105, 0, 132, .2)',
+    ],
+    borderColor: [
+    'rgba(200, 99, 132, .7)',
+    ],
+    borderWidth: 2
+    },
+    {
+    label: "გადახდილი",
+    data: [280, 480, 400, 190, 806, 207, 90],
+    backgroundColor: [
+    'rgba(0, 137, 132, .2)',
+    ],
+    borderColor: [
+    'rgba(0, 10, 130, .7)',
+    ],
+    borderWidth: 2
+    }
+    ]
+    },
+    options: {
+    responsive: true
+    }
+    });
+
+    var ctxL = document.getElementById("budget_chart").getContext('2d');
+    var myLineChart = new Chart(ctxL, {
+    type: 'line',
+    data: {
+    labels: ["იანვარი", "თებერვალი", "მარტი", "აპრილი", "მაისი", "ივნისი", "ივლისი"],
+    datasets: [{
+    label: "ასათვისებელი",
+    data: [450, 190, 400, 710, 360, 850, 200],
+    backgroundColor: [
+    'rgba(105, 0, 132, .2)',
+    ],
+    borderColor: [
+    'rgba(200, 99, 132, .7)',
+    ],
+    borderWidth: 2
+    },
+    {
+    label: "ათვისებული",
+    data: [140, 580, 100, 390, 106, 807, 500],
+    backgroundColor: [
+    'rgba(0, 137, 132, .2)',
+    ],
+    borderColor: [
+    'rgba(0, 10, 130, .7)',
+    ],
+    borderWidth: 2
+    }
+    ]
+    },
+    options: {
+    responsive: true
+    }
+    });
+</script>
 </body>
 </html>
