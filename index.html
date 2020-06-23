@@ -27,6 +27,7 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
+</style>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
@@ -633,19 +634,6 @@
          <!-- /.col -->
       </div>
      <div class="row">
-       <div class="col-md-6">
-           <div class="card card-info">
-            <div class="card-header">
-                <h3 class="card-title">დაგეგმილი & გადახდილი თანხები</h3>
-              </div>
-              <div class="card-body">
-                <div class="chart"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                  <canvas id="payment_chart"></canvas>
-                </div>
-              </div>
-              <!-- /.card-body -->
-            </div>
-         </div>
          <div class="col-md-6">
            <div class="card card-info">
               <div class="card-header bg-success">
@@ -653,12 +641,95 @@
               </div>
               <div class="card-body">
                 <div class="chart"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                  <canvas id="budget_chart"></canvas>
+                  <canvas style="height: 332px" id="budget_chart" ></canvas>
                 </div>
               </div>
               <!-- /.card-body -->
             </div>
          </div>
+         <div class="col-md-6">
+           <div class="card">
+               <div class="card-header">
+                  <h3 class="card-title">ტოპ პროექტები</h3>
+                  <div class="card-tools">
+                     <ul class="pagination pagination-sm float-right">
+                        <li class="page-item"><a class="page-link" href="#">«</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">»</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- /.card-header -->
+               <div class="card-body p-0">
+                  <table class="table">
+                     <thead>
+                        <tr>
+                           <th style="width: 10px">#</th>
+                           <th style="width: 320px;">დასახელება</th>
+                           <th>პროგრესი</th>
+                           <th style="width: 40px">მოგება</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>1.</td>
+                           <td>ქარიატის ადმინისტრაციულ ერთეული</td>
+                           <td>
+                              <div class="progress progress-xs">
+                                 <div class="progress-bar bg-success" style="width: 95%"></div>
+                              </div>
+                           </td>
+                           <td><span class="badge bg-success">95%</span></td>
+                        </tr>
+                        <tr>
+                           <td>2.</td>
+                           <td>ქარიატის ადმინისტრაციულ ერთეული</td>
+                           <td>
+                              <div class="progress progress-xs">
+                                 <div class="progress-bar bg-primary" style="width: 70%"></div>
+                              </div>
+                           </td>
+                           <td><span class="badge bg-primary">70%</span></td>
+                        </tr>
+                        <tr>
+                           <td>3.</td>
+                           <td>ქარიატის ადმინისტრაციულ ერთეული</td>
+                           <td>
+                              <div class="progress progress-xs progress-striped active">
+                                 <div class="progress-bar bg-warning" style="width: 60%"></div>
+                              </div>
+                           </td>
+                           <td><span class="badge bg-warning">60%</span></td>
+                        </tr>
+                        <tr>
+                           <td>4.</td>
+                           <td>ქარიატის ადმინისტრაციულ ერთეული</td>
+                           <td>
+                              <div class="progress progress-xs progress-striped active">
+                                 <div class="progress-bar bg-warning" style="width: 50%"></div>
+                              </div>
+                           </td>
+                           <td><span class="badge bg-warning">40%</span></td>
+                        </tr>
+                        <tr>
+                           <td>5.</td>
+                           <td>ქარიატის ადმინისტრაციულ ერთეული</td>
+                           <td>
+                              <div class="progress progress-xs progress-striped active">
+                                 <div class="progress-bar bg-danger" style="width: 10%"></div>
+                              </div>
+                           </td>
+                           <td><span class="badge bg-success">10%</span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <!-- /.card-body -->
+            </div>
+         </div>         
+
          <!-- /.col -->
       </div>
       </div><!-- /.container-fluid -->
@@ -720,40 +791,6 @@
 
 <script type="text/javascript">
 //line
-    var ctxL = document.getElementById("payment_chart").getContext('2d');
-    var myLineChart = new Chart(ctxL, {
-    type: 'line',
-    data: {
-    labels: ["იანვარი", "თებერვალი", "მარტი", "აპრილი", "მაისი", "ივნისი", "ივლისი"],
-    datasets: [{
-    label: "გეგმა",
-    data: [650, 590, 800, 810, 560, 550, 400],
-    backgroundColor: [
-    'rgba(105, 0, 132, .2)',
-    ],
-    borderColor: [
-    'rgba(200, 99, 132, .7)',
-    ],
-    borderWidth: 2
-    },
-    {
-    label: "გადახდილი",
-    data: [280, 480, 400, 190, 806, 207, 90],
-    backgroundColor: [
-    'rgba(0, 137, 132, .2)',
-    ],
-    borderColor: [
-    'rgba(0, 10, 130, .7)',
-    ],
-    borderWidth: 2
-    }
-    ]
-    },
-    options: {
-    responsive: true
-    }
-    });
-
     var ctxL = document.getElementById("budget_chart").getContext('2d');
     var myLineChart = new Chart(ctxL, {
     type: 'line',
